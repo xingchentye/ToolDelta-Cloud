@@ -1,0 +1,12 @@
+<configuration>
+    <appender name="CUSTOM" class="ch.qos.logback.core.OutputStreamAppender">
+        <encoder>
+            <pattern>%-5level%msg%n</pattern>
+        </encoder>
+        <outputStream class="org.tooldelta.logging.CustomOutputStream" />
+    </appender>
+
+    <root level="info">
+        <appender-ref ref="CUSTOM" />
+    </root>
+</configuration>
